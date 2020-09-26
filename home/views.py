@@ -1,14 +1,14 @@
 from django.shortcuts import render,HttpResponse
 from datetime import datetime
 from home.models import Contact
-from django.contrib.messages import constants as messages
+from django.contrib import messages
 # Create your views here.
+
 def index(request):
     context ={
         'variable':'This is a variable'
     }
     return render(request,'index.html',context)
-
 def about(request):
     return render(request,'about.html')
 
